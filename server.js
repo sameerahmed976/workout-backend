@@ -7,7 +7,11 @@ import dbConnect from "./db/dbConnect";
 import UsersRouter from "./routes/usersRoutes";
 const app = express();
 
-const whiteList = ["http://localhost:5000", "http://localhost:5173"];
+// const whiteList = ["http://localhost:5000", "http://localhost:5173"];
+const whiteList = ["https://workout-tracker-ixpy.onrender.com"];
+
+// ! origin  for postman
+
 const corsOptions = {
   origin: (origin, callback) => {
     if (whiteList.indexOf(origin) !== -1 || !origin) {
