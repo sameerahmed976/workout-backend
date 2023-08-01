@@ -176,7 +176,7 @@ const forgetPassword = asyncHandler(async (req, res) => {
   }
 
   const token = generateAccessToken(user._id, "10m");
-  const link = `http://localhost:5173/reset/${token}/${user._id}`;
+  const link = `https://workout-tracker-list.netlify.app/reset/${token}/${user._id}`;
   // const link = `http://localhost:5173/reset/${user._id}`;
 
   // http://localhost:5173/reset/asadas/asdasdasdasd
