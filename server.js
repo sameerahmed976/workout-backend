@@ -8,7 +8,7 @@ import UsersRouter from "./routes/usersRoutes";
 const app = express();
 
 // const whiteList = ["http://localhost:5000", "http://localhost:5173"];
-const whiteList = ["https://workout-tracker-ixpy.onrender.com"];
+const whiteList = ["https://workout-tracker-list.netlify.app"];
 
 // ! origin  for postman
 
