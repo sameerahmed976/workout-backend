@@ -175,7 +175,7 @@ const forgetPassword = asyncHandler(async (req, res) => {
     throw new Error("Email  does not exists");
   }
 
-  const token = generateAccessToken(user._id, "1d");
+  const token = generateAccessToken(user._id, "15m");
   const link = `https://workout-tracker-list.netlify.app/reset/${token}/${user._id}`;
   // const link = `http://localhost:5173/reset/${token}/${user._id}`;
 
