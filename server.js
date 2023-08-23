@@ -7,8 +7,8 @@ import dbConnect from "./db/dbConnect";
 import UsersRouter from "./routes/usersRoutes";
 const app = express();
 
-// const whiteList = ["http://localhost:5000", "http://localhost:5173"];
-const whiteList = ["https://workout-tracker-list.netlify.app"];
+// const whiteList = ["https://awesome-recipes.onrender.com", "https://awesome-recipes.onrender.com"];
+const whiteList = ["https://awesome-recipes.onrender.com"];
 
 // ! origin  for postman
 
@@ -23,6 +23,8 @@ const corsOptions = {
   optionsSuccessStatus: 200,
   credentials: true,
 };
+
+app.use(express.static("/public"));
 
 app.use(cors(corsOptions));
 // env file

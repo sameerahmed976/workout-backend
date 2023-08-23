@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import mongoose from "mongoose";
 import Workouts from "../models/workoutModel";
-
+// import path from "path";
 // get all workouts
 
 const getAllWorkouts = asyncHandler(async (req, res) => {
@@ -90,9 +90,18 @@ const deleteWorkout = asyncHandler(async (req, res) => {
   res.status(200).json(workout);
 });
 
+const getHeroImage = asyncHandler(async (req, res) => {
+  const imagePath = `https://res.cloudinary.com/duud2dkgv/image/upload/v1692626533/workout-image_zpivof.jpg`;
+ return  res.status(200).json({
+    message: "success",
+    src: `${imagePath}`,
+  });
+});
+
 export const workoutsController = {
   getAllWorkouts,
   getWorkout,
+  getHeroImage,
   createWorkout,
   updateWorkout,
   deleteWorkout,

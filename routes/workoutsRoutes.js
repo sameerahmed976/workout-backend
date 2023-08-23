@@ -4,6 +4,8 @@ import protect from "../middlewares/authMiddlewares";
 
 const router = express.Router();
 
+router.route("/image").get(workoutsController.getHeroImage);
+
 router
   .route("/")
   .get(protect, workoutsController.getAllWorkouts)

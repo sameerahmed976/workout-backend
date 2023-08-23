@@ -176,8 +176,8 @@ const forgetPassword = asyncHandler(async (req, res) => {
   }
 
   const token = generateAccessToken(user._id, "15m");
-  const link = `https://workout-tracker-list.netlify.app/reset/${token}/${user._id}`;
-  // const link = `http://localhost:5173/reset/${token}/${user._id}`;
+  const link = `https://awesome-recipes.onrender.com/reset/${token}/${user._id}`;
+  // const link = `https://awesome-recipes.onrender.com/reset/${token}/${user._id}`;
 
   // console.log(`* ~ file: userController.js:186 ~ resetPassword ~ link`, link);
   const html = ` <a href=${link} target="_blank"  >click here</a>  to reset your password , ${link}`;
