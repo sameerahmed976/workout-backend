@@ -7,8 +7,7 @@ import dbConnect from "./db/dbConnect";
 import UsersRouter from "./routes/usersRoutes";
 const app = express();
 
-// const whiteList = ["https://awesome-recipes.onrender.com", "https://awesome-recipes.onrender.com"];
-const whiteList = ["https://awesome-recipes.onrender.com"];
+const whiteList = ["https://workout-tracker-list.netlify.app"];
 
 // ! origin  for postman
 
